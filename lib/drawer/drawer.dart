@@ -32,9 +32,7 @@ class _Items extends StatelessWidget {
           leading: Icon(_items[i].icon, color: Colors.purple),
           title: Text(_items[i].title),
           trailing: Icon(_items[i].icon, color: Colors.purple),
-          onTap: () {
-            // Navigator.push(context, MaterialPageRoute(builder: (context)=> pageRoutes[i].page ));
-          },
+          onTap: () {},
         ),
       ),
     );
@@ -47,15 +45,17 @@ class MyDrawer extends StatelessWidget {
     final appTheme = Provider.of<ThemeSwitch>(context);
 
     return Drawer(
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            SafeArea(
-              child: Container(
-                width: double.infinity,
-                height: 200,
-                child: const CircleAvatar(
-                  backgroundColor: Colors.purple,
+      child: Column(
+        children: <Widget>[
+          SafeArea(
+            child: Container(
+              width: double.infinity,
+              height: 200,
+              color: appTheme.currentTheme.primaryColor,
+              child: const Center(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundColor: Colors.white24,
                   child: Text(
                     'ACY',
                     style: TextStyle(fontSize: 40, color: Colors.white),
@@ -63,19 +63,48 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: _Items()),
-            ListTile(
-              leading: const Icon(Icons.circle, color: Colors.purple),
-              title: const Text('Dark Mode'),
-              trailing: Switch.adaptive(
-                  value: appTheme.darkTheme,
-                  activeColor: Colors.purple,
-                  onChanged: (value) {
-                    appTheme.darkTheme = value;
-                  }),
+          ),
+          Expanded(child: _Items()),
+          // Switch claro / oscuro (binario)
+          ListTile(
+            leading: const Icon(Icons.circle, color: Colors.purple),
+            title: const Text('Dark Mode'),
+            trailing: Switch.adaptive(
+                value: appTheme.darkTheme,
+                activeColor: Colors.purple,
+                onChanged: (value) {
+                  appTheme.darkTheme = value;
+                }),
+          ),
+          // Selector de 3 temas con SegmentedButton (Material 3)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            child: SegmentedButton<ThemeMode>(
+              segments: const [
+                ButtonSegment(
+                  value: ThemeMode.light,
+                  icon: Icon(Icons.light_mode),
+                  label: Text('Claro'),
+                ),
+                ButtonSegment(
+                  value: ThemeMode.dark,
+                  icon: Icon(Icons.dark_mode),
+                  label: Text('Oscuro'),
+                ),
+                ButtonSegment(
+                  value: ThemeMode.system,
+                  icon: Icon(Icons.palette),
+                  label: Text('Purple'),
+                ),
+              ],
+              selected: {appTheme.themeMode},
+              onSelectionChanged: (Set<ThemeMode> selection) {
+                appTheme.themeMode = selection.first;
+              },
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 12),
+        ],
       ),
     );
   }
