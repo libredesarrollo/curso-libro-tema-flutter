@@ -1,73 +1,77 @@
-# Curso/Libro: Componentes y Animaciones Personalizadas en Flutter
+# 🎨 Themes & Components en Flutter
 
-Guía práctica para aprender a crear componentes, animaciones y aplicaciones adaptativas en **Flutter 3**.
+[![Flutter Version](https://img.shields.io/badge/Flutter-%5E3.12.0-blue.svg)](https://flutter.dev)
+[![Dart Version](https://img.shields.io/badge/Dart-%5E3.0.0-blue.svg)](https://dart.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-https://www.desarrollolibre.net/libros/componentes-y-animaciones-en-flutter
-
----
-
-## Índice de Contenidos
-
-1. [Sobre el libro](#sobre-el-libro)  
-2. [Perfil del lector ideal](#perfil-del-lector-ideal)  
-3. [Estructura del libro](#estructura-del-libro)  
-4. [Tecnologías y enfoques destacados](#tecnologías-y-enfoques-destacados)  
-5. [Repositorio en GitHub](#repositorio-en-github)  
-6. [Cómo usar este repositorio](#cómo-usar-este-repositorio)  
-7. [Autor](#autor)  
-8. [Licencia y garantías](#licencia-y-garantías)
+Este proyecto es una guía práctica enfocada en el dominio de **temas dinámicos**, **componentes personalizados** y **animaciones avanzadas** en Flutter. Desarrollado como material de apoyo para el aprendizaje profundo del framework.
 
 ---
 
-## Sobre el libro
+## 📚 Libro Promocional: Componentes y Animaciones en Flutter
 
-**“Componentes y animaciones personalizadas en Flutter”** es una guía práctica impulsada por ejemplos, centrada en cómo combinar widgets estándar para crear componentes más avanzados y visualmente atractivos, como headers personalizados, barras de progreso, botones con comportamientos especiales, etc. También abarca temas como temas múltiples (modo claro/oscuro), diseño adaptativo y el uso creativo de `CustomPainter` para gráficos precisos :contentReference[oaicite:0]{index=0}.
+Este código acompaña al libro profesional **"Componentes y Animaciones personalizadas en Flutter"**. Un recorrido completo para elevar tus habilidades de nivel intermedio a avanzado.
 
----
+<p align="center">
+  <a href="https://www.desarrollolibre.net/libros/componentes-y-animaciones-en-flutter">
+    <img src="https://www.desarrollolibre.net/public/images/libros/componentes-y-animaciones-en-flutter/book-cover.png" alt="Book Cover" width="250">
+  </a>
+</p>
 
-## Perfil del lector ideal
+### 🚀 ¿Qué aprenderás?
+* **Capítulo 2**: Fundamentos de animaciones (Contenedores animados y `AnimationController`).
+* **Capítulo 3**: Creación de componentes modernos (Botones especiales, grids escalonados, headers expandibles).
+* **Capítulo 4**: Implementación de **Sistemas Multitema** (Modo oscuro, claro y personalizados).
+* **Capítulo 5**: Dominio de `CustomPainter` para figuras complejas.
+* **Capítulo 6**: Diseño **Adaptativo y Responsive** para múltiples dispositivos.
 
-Este libro está orientado a desarrolladores con conocimientos básicos de Flutter que desean profundizar su comprensión y habilidad mediante la creación de componentes personalizados y animaciones avanzadas. Está dirigido especialmente a usuarios de nivel intermedio :contentReference[oaicite:1]{index=1}.
-
----
-
-## Estructura del libro
-
-El contenido está organizado en **6 capítulos**, con un enfoque progresivo y práctico. Se recomienda seguir el orden sugerido mientras se replican y experimentan los ejemplos:
-
-1. **Capítulo 1**: Creación de un proyecto nuevo en Flutter.  
-2. **Capítulo 2**: Animaciones en Flutter, incluyendo contenedores animados y uso de `AnimationController`.  
-3. **Capítulo 3**: Construcción de componentes comunes como botones especiales, grids escalonados, headers expansibles y menús laterales.  
-4. **Capítulo 4**: Implementación de múltiples temas (por ejemplo, modo claro y oscuro).  
-5. **Capítulo 5**: Uso de `CustomPainter` para dibujar sobre el canvas con precisión.  
-6. **Capítulo 6**: Desarrollo de una aplicación adaptativa que se ajuste a diversos tamaños de pantalla :contentReference[oaicite:2]{index=2}.
+👉 **[Consigue el libro completo aquí](https://www.desarrollolibre.net/libros/componentes-y-animaciones-en-flutter)**
 
 ---
 
-## Tecnologías y enfoques destacados
+## ✨ Características del Proyecto
 
-- **Flutter 3** como framework principal.  
-- **Animaciones**: transiciones suaves, control con `AnimationController`.  
-- **Componentes personalizados**: combinación avanzada de widgets estándar.  
-- **Temas**: diseño con soporte para temas claro/oscuro.  
-- **Gráficos con `CustomPainter`**: dibujo de formas precisas y creativas.  
-- **Diseño adaptativo**: interfaces que se ajustan a múltiples dispositivos y tamaños de pantalla :contentReference[oaicite:3]{index=3}.
+* **Dynamic Theme Switching**: Cambio de identidad visual de la app en tiempo real mediante `Provider`.
+* **State Management**: Implementación robusta con `ChangeNotifierProvider`.
+* **Custom Widgets**: Headers y Cards personalizados con sombras y bordes dinámicos.
+* **Responsive Layout**: Estructura preparada para adaptarse a diferentes tamaños de pantalla.
 
----
+## 🛠️ Tecnologías Utilizadas
 
-## Repositorio en GitHub
-
-El repositorio de GitHub **libredesarrollo/curso-libro-tema-flutter** contiene la estructura base de un proyecto Flutter, creada originalmente con el comando `flutter create`. Incluye carpetas como `android/`, `ios/`, `lib/`, `linux/`, `macos/`, `web/`, `windows/`, junto con archivos clave como:
-
-- `README.md` (actualmente con contenido estándar)  
-- `pubspec.yaml`  
-- `.gitignore`, `analysis_options.yaml`, `pubspec.lock`  
-- Carpeta `test/` para pruebas :contentReference[oaicite:4]{index=4}.
+* **Flutter SDK**: UI Framework.
+* **Provider**: Gestión de estado.
+* **Material Design 3**: Sistema de diseño.
 
 ---
 
-## Cómo usar este repositorio
+## 🚀 Instalación Rápida
 
-1. Clona o descarga el repositorio:  
+1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/libredesarrollo/curso-libro-tema-flutter.git
+   git clone https://github.com/tu-usuario/themes-flutter.git
+   ```
+
+2. **Instalar dependencias**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Ejecutar la aplicación**
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 📁 Estructura de Carpetas
+
+```text
+lib/
+├── drawer/        # Navegación lateral personalizada
+├── theme/         # Lógica de temas y estilos globales
+└── main.dart      # Configuración central y entry point
+```
+
+---
+
+Desarrollado con pasión por [Andrés Cruz](https://www.desarrollolibre.net) • **DesarrolloLibre.net**
